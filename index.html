@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="topic-input-container">
+            <h1>Select Quiz Topic</h1>
+            <select id="quiz-topic">
+                <option value="politics">Politics</option>
+                <option value="flora and fauna">Flora & Fauna</option>
+                <option value="science">Science</option>
+                <option value="computers">Computer</option>
+                <option value="history">History</option>
+            </select>
+            <button class="btn" onclick="loadQuestions()">Load Quiz</button>
+        </div>
+        <div id="quiz-container" class="hidden">
+            <h1>Quiz Application</h1>
+            <div id="question-container">
+                <p id="question">Loading...</p>
+                <div id="answer-buttons" class="btn-container">
+                    <!-- Answer buttons will be generated here -->
+                </div>
+            </div>
+            <button id="next-btn" class="btn hidden" onclick="nextQuestion()">Next</button>
+        </div>
+        <div id="result-container" class="hidden">
+            <h1>Your Score</h1>
+            <p id="score">Score: 0</p>
+            <button class="btn" onclick="restartQuiz()">Restart Quiz</button>
+        </div>
+    </div>
+    <div id="popup" class="hidden"></div>
+    <script src="script.js"></script>
+</body>
+</html>
